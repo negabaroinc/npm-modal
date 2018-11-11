@@ -6,6 +6,8 @@
   "types": "./src/types/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc ./src/index.tsx --outDir ./lib --jsx react",
+    "lib": "babel src --out-dir lib --extensions \".ts,.tsx\"",
     "start": "webpack-dev-server ./test/index.tsx --mode development --open",
     "build": "webpack ./test/index.tsx --development",
     "deploy": "np --yolo"
@@ -17,10 +19,10 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.0.0",  
+    "@babel/preset-typescript": "^7.0.0",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
-    "@types/styled-components": "^3.0.1", 
+    "@types/styled-components": "^3.0.1",
     "babel-loader": "^8.0.2",
     "css-loader": "^0.26.1",
     "webpack": "^4.16.0",
